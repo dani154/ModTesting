@@ -1,0 +1,11 @@
+# Block Localization
+
+tile.modtesting:flag.name=Flag of Austria
+
+# Item Localization
+
+item.modtesting:mapleLeaf.name=Maple Leaf of Awesomeness
+
+# Creative Tabs
+
+itemGroup.modtesting=Mod Testing

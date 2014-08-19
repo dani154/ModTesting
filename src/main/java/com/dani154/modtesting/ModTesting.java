@@ -1,6 +1,9 @@
 package com.dani154.modtesting;
 
 import com.dani154.modtesting.handler.ConfigurationHandler;
+import com.dani154.modtesting.init.ModBlocks;
+import com.dani154.modtesting.init.ModItems;
+import com.dani154.modtesting.init.Recipes;
 import com.dani154.modtesting.proxy.IProxy;
 import com.dani154.modtesting.reference.Reference;
 import com.dani154.modtesting.utility.LogHelper;
@@ -25,12 +28,19 @@ public class ModTesting
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModItems.init();
+
+        ModBlocks.init();
+
         LogHelper.info("Pre Initialization Complete!");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
+
         LogHelper.info("Initialization Complete!");
     }
 
