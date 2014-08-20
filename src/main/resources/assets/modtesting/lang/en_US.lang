@@ -1,3 +1,13 @@
+# Keys
+keys.modtesting.category=Mod Testing
+keys.modtesting.charge=Charge
+keys.modtesting.release=Release
+
+
+# Creative Tabs
+
+itemGroup.modtesting=Mod Testing
+
 # Block Localization
 
 tile.modtesting:flag.name=Flag of Austria
@@ -6,6 +16,3 @@ tile.modtesting:flag.name=Flag of Austria
 
 item.modtesting:mapleLeaf.name=Maple Leaf of Awesomeness
 
-# Creative Tabs
-
-itemGroup.modtesting=Mod Testing

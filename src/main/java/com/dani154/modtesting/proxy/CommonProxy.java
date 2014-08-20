@@ -1,5 +1,5 @@
 package com.dani154.modtesting.proxy;
 
-public class CommonProxy implements IProxy
+public abstract class CommonProxy implements IProxy
 {
 }

@@ -1,5 +1,6 @@
 package com.dani154.modtesting;
 
+import com.dani154.modtesting.client.handler.KeyInputEventHandler;
 import com.dani154.modtesting.handler.ConfigurationHandler;
 import com.dani154.modtesting.init.ModBlocks;
 import com.dani154.modtesting.init.ModItems;
@@ -29,6 +30,8 @@ public class ModTesting
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        proxy.registerKeyBinding();
+
         ModItems.init();
 
         ModBlocks.init();
@@ -39,6 +42,8 @@ public class ModTesting
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
         Recipes.init();
 
         LogHelper.info("Initialization Complete!");
